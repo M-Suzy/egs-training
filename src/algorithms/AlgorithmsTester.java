@@ -1,10 +1,11 @@
 package algorithms;
 
-import algorithms.sorting.BubbleSort;
-import algorithms.sorting.InsertionSort;
-import algorithms.sorting.SelectionSort;
-import algorithms.sorting.SortingAlgorithm;
+import algorithms.homework_one.*;
+import algorithms.homework_two.MergeSort;
+import algorithms.homework_two.QuickSort;
+import algorithms.homework_two.SubsetAlgorithms;
 
+import javax.naming.ServiceUnavailableException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -18,7 +19,9 @@ public class AlgorithmsTester {
    * @param algorithm
    */
   public static void testSort(int[] arr, SortingAlgorithm algorithm) {
-    System.out.println(Arrays.toString(algorithm.sort(arr)));
+    int[] arr_cpy = arr.clone();
+    algorithm.sort(arr_cpy);
+    System.out.println(Arrays.toString(arr_cpy));
   }
 
   /** Utility method to test the N-sized matrices generation */
@@ -50,8 +53,25 @@ public class AlgorithmsTester {
   }
 
   public static void main(String[] args) {
+
     // Sorting algos
-    int[] arr1 = {7, 3, 1, 2, 4, 8, 6, 5};
+    int[] arr1 = {7, 3, 1, 1, 2, 2, 2, 4, 8, 6, 5};
+    System.out.println("Unsorted array is "+ Arrays.toString(arr1));
+    System.out.println("Quicksort result:");
+    testSort(arr1, new QuickSort());
+    System.out.println("Mergesort result:");
+    testSort(arr1, new MergeSort());
+
+    SubsetAlgorithms subsetAlgorithms = new SubsetAlgorithms();
+    int[] arrSum =  {2, 3, -6, -1, -9, -1, 6, 3, -8, 8};
+    System.out.println("Array " +Arrays.toString(arrSum)+" has subset summing to zero: " + subsetAlgorithms.hasSubsetSum(arrSum, 0));
+    int[] arr_missing = {1, 5, 3, 4, 6};
+    System.out.println("Given Array: "+ Arrays.toString(arr_missing));
+    System.out.println("Missing Value for range [1, 6]: "+ subsetAlgorithms.getMissingValue(arr_missing, 1, 6));
+    // Test duplicates removal
+    System.out.println("Removed duplicates for array :" + Arrays.toString(arr1));
+    System.out.println(Arrays.toString(new SubsetAlgorithms().deleteDuplicates(arr1)));
+    /*
     System.out.println("Sort array " + Arrays.toString(arr1));
     System.out.println("Bubble sort:");
     testSort(arr1, new BubbleSort());
@@ -81,5 +101,7 @@ public class AlgorithmsTester {
 
     // Test Matrix
     testMatrices();
+     */
+
   }
 }
