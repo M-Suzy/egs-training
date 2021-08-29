@@ -1,4 +1,4 @@
-package algorithms.homework_one;
+package com.company.algorithms.homework_second;
 
 public class SelectionSort implements SortingAlgorithm{
   @Override

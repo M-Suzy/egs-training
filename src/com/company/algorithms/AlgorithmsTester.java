@@ -1,11 +1,10 @@
-package algorithms;
+package com.company.algorithms;
 
-import algorithms.homework_one.*;
-import algorithms.homework_two.MergeSort;
-import algorithms.homework_two.QuickSort;
-import algorithms.homework_two.SubsetAlgorithms;
+import com.company.algorithms.homework_second.*;
+import com.company.algorithms.homework_third.MergeSort;
+import com.company.algorithms.homework_third.QuickSort;
+import com.company.algorithms.homework_third.SubsetAlgorithms;
 
-import javax.naming.ServiceUnavailableException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,7 +12,7 @@ public class AlgorithmsTester {
   private static final int MAX_TRIES = 5; // the maximum allowed number of wrong inputs
 
   /**
-   * Utility method to test Sorting algorithms
+   * Utility method to test Sorting com.company.algorithms
    *
    * @param arr
    * @param algorithm

@@ -1,4 +1,4 @@
-package algorithms.homework_one;
+package com.company.algorithms.homework_second;
 
 /** Class for Matrix generation with different properties */
 public class MatrixGenerator {

@@ -1,4 +1,4 @@
-package algorithms.homework_one;
+package com.company.algorithms.homework_second;
 
 public interface SortingAlgorithm {
     void sort(int[] arr);

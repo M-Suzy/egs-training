@@ -1,6 +1,6 @@
-package algorithms.homework_two;
+package com.company.algorithms.homework_third;
 
-import algorithms.homework_one.SortingAlgorithm;
+import com.company.algorithms.homework_second.SortingAlgorithm;
 
 public class MergeSort implements SortingAlgorithm {
   /**

@@ -1,4 +1,6 @@
-package com.company.homework_1;
+package com.company.homework_first;
+
+import com.company.homework_first.ConvertedNumberPrinter;
 
 public class TestNumberConversions {
   public static void main(String[] args) {

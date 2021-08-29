@@ -1,4 +1,4 @@
-package com.company.homework_1;
+package com.company.homework_first;
 
 /** Utility class for Number conversions. */
 public class NumberConverter {
