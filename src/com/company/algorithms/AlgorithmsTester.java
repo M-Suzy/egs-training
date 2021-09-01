@@ -63,13 +63,15 @@ public class AlgorithmsTester {
 
     SubsetAlgorithms subsetAlgorithms = new SubsetAlgorithms();
     int[] arrSum =  {2, 3, -6, -1, -9, -1, 6, 3, -8, 8};
-    System.out.println("Array " +Arrays.toString(arrSum)+" has subset summing to zero: " + subsetAlgorithms.hasSubsetSum(arrSum, 0));
+    System.out.println("Array " +Arrays.toString(arrSum)+" has subset summing to zero: " + subsetAlgorithms.hasSubsetSummingToZero(arr1));
     int[] arr_missing = {1, 5, 3, 4, 6};
     System.out.println("Given Array: "+ Arrays.toString(arr_missing));
     System.out.println("Missing Value for range [1, 6]: "+ subsetAlgorithms.getMissingValue(arr_missing, 1, 6));
     // Test duplicates removal
     System.out.println("Removed duplicates for array :" + Arrays.toString(arr1));
     System.out.println(Arrays.toString(new SubsetAlgorithms().deleteDuplicates(arr1)));
+
+
     /*
     System.out.println("Sort array " + Arrays.toString(arr1));
     System.out.println("Bubble sort:");

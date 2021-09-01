@@ -1,11 +1,13 @@
 package com.company.algorithms.homework_third;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SubsetAlgorithms {
   /**
-   * Function in general check whether there is a subset summing to the given number. This algorithm
-   * uses a popular dynamic programming approach.
+   * Function in general checks whether there is a subset summing to the given number given array of
+   * positive integers. This algorithm uses a popular dynamic programming approach.
    *
    * @param arr
    * @param sum
@@ -34,6 +36,24 @@ public class SubsetAlgorithms {
   }
 
   /**
+   * Uses hashing to find if there exists any subset summing to zero.
+   *
+   * @param arr
+   * @return
+   */
+  public boolean hasSubsetSummingToZero(int[] arr) {
+    //used for hashing
+    List<Integer> sumSet = new ArrayList<>();
+    int sum = 0;
+    for (int x : arr) {
+      sum += x;
+      if (x == 0 || sum == 0 || sumSet.contains(sum)) return true;
+      sumSet.add(sum);
+    }
+    return false;
+  }
+
+  /**
    * Finds integer missing in any given range.
    *
    * @param arr
@@ -56,13 +76,13 @@ public class SubsetAlgorithms {
    * @param arr
    */
   public int[] deleteDuplicates(int[] arr) {
-   new QuickSort().sort(arr);
-   int count = 0;
-   for(int i = 0; i<arr.length; i++){
-     if(i==0 || arr[i]!=arr[i-1]){
-       arr[count++] = arr[i];
-     }
-   }
-   return Arrays.copyOf(arr, count);
+    new QuickSort().sort(arr);
+    int count = 0;
+    for (int i = 0; i < arr.length; i++) {
+      if (i == 0 || arr[i] != arr[i - 1]) {
+        arr[count++] = arr[i];
+      }
+    }
+    return Arrays.copyOf(arr, count);
   }
 }
